@@ -15,7 +15,7 @@ This is a team collaboration project relevant to Machine Learning and prediction
 
 ### Team Member
 
-Andia, Chris, Joey, Liwen, and Soeparto (alphabetical order).
+Andia, Chris, Joey, Liwen, and Parto (alphabetical order).
 
 ### Topic Selection
 
