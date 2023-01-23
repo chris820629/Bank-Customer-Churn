@@ -1,4 +1,4 @@
-# Layoff Prediction
+# Bank Customer Churn
 This is a team collaboration project relevant to Machine Learning and predictions based on various learning models.
 
 ## Table of Contents
