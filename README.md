@@ -35,6 +35,7 @@ We began exploring different datasets to address the question of when a company 
 
 - Source code: [EDA.ipynb](./EDA.ipynb), [DBMS_Analysis.ipynb](./DBMS_Analysis.ipynb).
 - Source data: [Churn_Modelling_2.csv](./Resources/Churn_Modelling_2.csv) (source: [Churn of Bank Customers](https://www.kaggle.com/datasets/mathchi/churn-for-bank-customers?resource=download)).
+- Database data: [Churn_Modelling_clean.csv](./Data/Churn_Modelling_clean.csv).
 - Image file: png files.
 - Software: [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide), [Scikit-learn User Guide - Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html), [Python imbalanced-learn](https://pypi.org/project/imbalanced-learn/), etc.
 
