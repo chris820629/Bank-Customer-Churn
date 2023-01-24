@@ -41,9 +41,13 @@ We began exploring different datasets to address the question of when a company 
 
 ### Next Step
 
+Added Andia's SVM and NN models.
+
 ## References
 
 [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide)  
 [Scikit-learn User Guide: Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html)  
 [Python imbalanced-learn](https://pypi.org/project/imbalanced-learn/)  
 [Ensemble methods](https://imbalanced-learn.org/stable/references/ensemble.html#)  
+
+
