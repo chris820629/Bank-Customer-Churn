@@ -23,6 +23,10 @@ We began exploring different datasets to address the question of when a company 
 
 ### Purpose of Project
 
+- Examine historical dataset
+- Identify potential causes for bank customer churn
+- Develop Machine learning model to predict churn
+
 ### Current Status
 
 - Topic selection has been finalized.
