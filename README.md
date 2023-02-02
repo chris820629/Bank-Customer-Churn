@@ -47,7 +47,7 @@ This project was the final team project to cultivate collaboration, teamwork, an
 
 - ✅ Assessment of dataset and database management system (DBMS) is completed.
   - Our dataset consisted of 10000 rows and 14 columns. A few numeric columns contained some outliers as illustrated in Fig. 1(a)&ndash;(c).
-  - A PostgreSQL database that stores two tables, called **main_df** and **clean_df**, was created and can be connected without problems from Python code of each Team Member. We documented some SQL queries for retrieving some data from the database ([BankCustomerChurn_Optimization.ipynb](./BankCustomerChurn_Optimization.ipynb)).
+  - A PostgreSQL database that stores two tables, called **main_df** and **clean_df**, was created and can be connected without problems from Python code of each Team Member. We documented some SQL queries for retrieving some data from the database ([BankCustomerChurn_ModelSelection.ipynb](./BankCustomerChurn_ModelSelection.ipynb)).
 
   <hr>
   <table><tr><td><img src='Data/CreditScore_boxplot.png' title='(a) Column CreditScore'></td><td><img src='Data/Age_boxplot.png' title='(b) Column Age'></td><td><img src='Data/NumOfProducts_boxplot.png' title='(c) Column NumOfProducts'></td></tr></table>
@@ -71,7 +71,7 @@ Our team discussed our overall project objectives and resources (datasets, techn
 ### Resources
 
 - GitHub repository: [Bank-Customer-Churn](https://github.com/chris820629/Bank-Customer-Churn) for sharing our analysis details, datasets, and results.
-- Source code: [EDA.ipynb](./EDA.ipynb), [BankCustomerChurn_Optimization.ipynb](./BankCustomerChurn_Optimization.ipynb), [Decision_Tree_Customer_Churn.ipynb](./Decision_Tree_Customer_Churn.ipynb).
+- Source code: [BankCustomerChurn_ModelSelection.ipynb](./BankCustomerChurn_ModelSelection.ipynb).
 - Source data: [Churn_Modelling_2.csv](./Resources/Churn_Modelling_2.csv) (source: [Churn of Bank Customers](https://www.kaggle.com/datasets/mathchi/churn-for-bank-customers?resource=download)).
 - Database data: [Churn_Modelling_main.csv](./Resources/Churn_Modelling_main.csv), [Churn_Modelling_cs_lt850.csv](./Resources/Churn_Modelling_cs_lt850.csv), [Churn_Modelling_cs_lt2sigma.csv](./Resources/Churn_Modelling_cs_lt2sigma.csv).
 - Fabricated DBMS: PostgreSQL ([Bank Customer Churn fabricated DBMS](./Data/BankCustomerChurn_fabricated_db.png)).
