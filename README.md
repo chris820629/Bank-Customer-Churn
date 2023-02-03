@@ -77,7 +77,7 @@ Our team discussed our overall project objectives and resources (datasets, techn
 - Fabricated DBMS: PostgreSQL ([Bank Customer Churn fabricated DBMS](./Data/BankCustomerChurn_fabricated_db.png)).
 - Image file: png files.
 - Software: [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide), [Scikit-learn User Guide - Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html), [Python imbalanced-learn](https://pypi.org/project/imbalanced-learn/).
-- Tableau dashboard: TBD.
+- Tableau dashboard: [Tableau Dashboard](https://public.tableau.com/views/BankCustomerChurnAnalysis_16754641709880/BankCustomerChurnAnalysis?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
 ### Next Step
 
