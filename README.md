@@ -10,8 +10,10 @@ This is a team collaboration project relevant to Machine Learning, Neural Networ
   - [Current Status](#current-status)
 - [Segment 1: Sketch It Out](#segment-1-sketch-it-out)
   - [Resources](#resources)
-  - [Next Step](#next-step)
+  - [Model Selection Criteria](#model-selection-criteria)
 - [Segment 2: Build and Assemble](#segment-2-build-and-assemble)
+  - [Analysis Results](#analysis-results)
+- [Segment 3: Put It All Together](#segment-3-put-it-all-together)
 - [References](#references)
 
 ## Overview of Project
@@ -60,9 +62,12 @@ This project was the final team project to cultivate collaboration, teamwork, an
 
 - ✅ Preprocessing dataset and EDA is completed. The cleaned datasets, [Churn_Modelling_main.csv](./Resources/Churn_Modelling_main.csv) and [Churn_Modelling_cs_lt850.csv](./Resources/Churn_Modelling_cs_lt850.csv), are stored in the GitHub repo and PostgreSQL database.
 
-- 🟩 Model Testing and Determination.
+- ✅ Model Testing and Determination.
   - Evaluation Machine Learning or Neural Network models that could effectively predict bank customer churn rate.
-  - Optimization of our final models is ongoing.
+  - Optimization of our final models is completed.
+
+- 🟩 Final Presentation.
+  - Final presentation and story/dashboard are available online.
 
 ## Segment 1: Sketch It Out
 
@@ -71,22 +76,23 @@ Our team discussed our overall project objectives and resources (datasets, techn
 ### Resources
 
 - GitHub repository: [Bank-Customer-Churn](https://github.com/chris820629/Bank-Customer-Churn) for sharing our analysis details, datasets, and results.
-- Source code: [BankCustomerChurn_ModelSelection.ipynb](./BankCustomerChurn_ModelSelection.ipynb).
+- Source code: [BankCustomerChurn_ModelSelection.ipynb](./BankCustomerChurn_ModelSelection.ipynb), [BankCustomerChurn_EDA.ipynb](./BankCustomerChurn_EDA.ipynb).
 - Source data: [Churn_Modelling_2.csv](./Resources/Churn_Modelling_2.csv) (source: [Churn of Bank Customers](https://www.kaggle.com/datasets/mathchi/churn-for-bank-customers?resource=download)).
 - Database data: [Churn_Modelling_main.csv](./Resources/Churn_Modelling_main.csv), [Churn_Modelling_cs_lt850.csv](./Resources/Churn_Modelling_cs_lt850.csv), [Churn_Modelling_cs_lt2sigma.csv](./Resources/Churn_Modelling_cs_lt2sigma.csv).
 - Fabricated DBMS: PostgreSQL ([Bank Customer Churn fabricated DBMS](./Data/BankCustomerChurn_fabricated_db.png)).
 - Image file: png files.
 - Software: [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide), [Scikit-learn User Guide - Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html), [Python imbalanced-learn](https://pypi.org/project/imbalanced-learn/).
-- Tableau dashboard: [Tableau Dashboard](https://public.tableau.com/views/BankCustomerChurnAnalysis_16754641709880/BankCustomerChurnAnalysis?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+- Tableau dashboard: [Tableau Dashboard](https://public.tableau.com/views/BankCustomerChurnAnalysis_16754641709880/BankCustomerChurnAnalysis?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link).
 
-### Next Step
+### Model Selection Criteria
 
-We have been working on improving the accuracy and sensitivity of our learning models and preparing story/dashboard for presenting our data effectively.
+Based on our assessment and analysis of the bank customer churn dataset, a few machine learning models were isolated and applied to optimize our predictions. Below is the summary of the model selection criteria that we have applied in this study.
 
-- Tableau dashboard/story.
-- Optimization of our learning models.
-- Will transform the summary statistics table into a fabricated database that can also be used for Tableau dashboard/story.
-- Final touches.
+- Is the label variable known? **Yes**. We then narrowed down our models to either supervised learning or neural network models.
+- Is the target variable categorical? **Yes**. Our target variable contained dichotomous (binary) categorical values, which suggested that classification-based supervised learning would be effective in predicting bank customer churn rate.
+- Do our features contain numerical (continuous/interval) and categorical (*object* or *string* data type) values? **Yes**. We then applied Pandas `get_dummies()` method to encode those categorical values.
+- Out of 10000 total rows, the ratio of our target values was approximately 4:1, which could be considered imbalanced. One of the over/undersampling combination techniques called `SMOTEENN` was then employed to rebalance our target values.
+- As for model optimization, we further trained and tested our models by tuning several hyper-parameters to derive the optimal parameters for our final models.
 
 ## Segment 2: Build and Assemble
 
@@ -138,14 +144,20 @@ Our team performed some experiments to test and train our models, build the data
 
 ## Segment 3: Put It All Together
 
-We put the final touches on our models, database, and dashboard. Then create and deliver our final presentation to the class.
+We put the final touches on our models, database, and dashboard. Then create and deliver our final presentation to the class. We have been working on improving the accuracy and sensitivity of our learning models and preparing story/dashboard for presenting our data effectively.
+
+- Optimization of our learning models.
+- Will transform the summary statistics table into a fabricated database that can also be used for Tableau dashboard/story.
+- Final touches.
 
 ## References
 
 [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide)  
 [TensorFlow Documentation](https://www.tensorflow.org/guide/)  
-[Scikit-learn User Guide - Unsupervised Learning](https://scikit-learn.org/stable/unsupervised_learning.html)  
 [Scikit-learn User Guide - Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html)  
 [Matplotlib - Plot types](https://matplotlib.org/stable/plot_types/index.html)  
+[seaborn: statistical data visualization](https://seaborn.pydata.org/index.html)  
 [Ensemble methods](https://imbalanced-learn.org/stable/references/ensemble.html#)  
 [PostgreSQL documentation](https://www.postgresql.org/docs/)  
+[SQLAlchemy](https://www.sqlalchemy.org/)  
+[Tableau Public](https://www.tableau.com/products/public)  
