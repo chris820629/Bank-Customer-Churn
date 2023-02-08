@@ -173,12 +173,12 @@ We put the final touches on our models, database, and dashboard. Then create and
 ### Result of Optimization
 
 **Table 3. RandomForestClassifier with SMOTEENN resampling using dataset of credit score less than 850 only before and after model optimization.**
-| Optimization	| Exited	| Balanced accuracy score	| Precision	| Recall	| F1 score |
-| :--           | :--     | :--                     | :--       | :--     | :--      |
-| Before	      | 0	      | 0.74	                  | 0.90	    | 0.89	  | 0.89     |
-| Before	      | 1	      | 0.74	                  | 0.56	    | 0.59	  | 0.58     |
-| After	        | 0	      | 0.90	                  | 0.90	    | 0.87	  | 0.88     |
-| After	        | 1	      | 0.90	                  | 0.89	    | 0.92	  | 0.90     |
+| Optimization | Exited | Balanced accuracy score	| Precision	| Recall	| F1 score |
+| :--          | :--    | :--                     | :--       | :--     | :--      |
+| Before	     | 0	    | 0.74	                  | 0.90	    | 0.89	  | 0.89     |
+| Before	     | 1	    | 0.74	                  | 0.56	    | 0.59	  | 0.58     |
+| After	       | 0	    | 0.90	                  | 0.90	    | 0.87	  | 0.88     |
+| After	       | 1	    | 0.90	                  | 0.89	    | 0.92	  | 0.90     |
 
 ### Furture Recommendation
 
