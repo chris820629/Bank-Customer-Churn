@@ -170,6 +170,18 @@ We put the final touches on our models, database, and dashboard. Then create and
 | Suitable for this project     | 🟢  | 🟢  | 🟢  | 🟡  | 🟡      |  ⛔       |
 | Learning models of choice     | 💚  | 💚    | 💛  | 💛  | 💛      |  💔       |
 
+### Furture Recommendation
+
+Model selected after optimization is sufficient and successful. Here are some challenges and limitations we identified during the process: 
+- Unconscious bias: when analyzing data and deciding to remove outliers with certain criteria without awareness of underlying causes, for instance, why many cases with credit score to their maximal level. 
+- Limited data source: with this data source, unfortunately, it is unavailable to request more data features when we were in doubt, for example, we would like to know if other data is available like when customers with balance of 0, how long was the balance becoming 0. 
+- Over/Underfitting: when real world data input, further training and testing are needed to reassure no overfitting or underfitting.
+
+With all, a few recommendations that might improve our prediction are listed below: 
+- Explore other data source and establish more concrete parameters to regulate training and testing data moving forward. 
+- Consider to transform dataset with less than 2 sigma range in certain features. 
+- Neural network deep learning with optimization could be further performed with the benefit of inclusive multiple unknown neurons and dense layers. 
+
 ## References
 
 [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide)  
