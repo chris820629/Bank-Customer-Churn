@@ -170,6 +170,16 @@ We put the final touches on our models, database, and dashboard. Then create and
 | Suitable for this project     | 🟢  | 🟢  | 🟢  | 🟡  | 🟡      |  ⛔       |
 | Learning models of choice     | 💚  | 💚    | 💛  | 💛  | 💛      |  💔       |
 
+### Result of Optimization
+
+**Table 3. RandomForestClassifier with SMOTEENN resampling using dataset of credit score less than 850 only before and after model optimization.**
+| Optimization	| Exited	| Balanced accuracy score	| Precision	| Recall	| F1 score |
+| :--           | :--     | :--                     | :--       | :--     | :--      |
+| Before	      | 0	      | 0.74	                  | 0.90	    | 0.89	  | 0.89     |
+| Before	      | 1	      | 0.74	                  | 0.56	    | 0.59	  | 0.58     |
+| After	        | 0	      | 0.90	                  | 0.90	    | 0.87	  | 0.88     |
+| After	        | 1	      | 0.90	                  | 0.89	    | 0.92	  | 0.90     |
+
 ### Furture Recommendation
 
 Model selected after optimization is sufficient and successful. Here are some challenges and limitations we identified during the process: 
