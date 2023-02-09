@@ -88,6 +88,7 @@ Our team discussed our overall project objectives and resources (datasets, techn
 - Image file: png files.
 - Software: [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide), [Scikit-learn User Guide - Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html), [Python imbalanced-learn](https://pypi.org/project/imbalanced-learn/).
 - Tableau dashboard: [Tableau Dashboard](https://public.tableau.com/views/BankCustomerChurnAnalysis_Story/BankCustomerChurnAnalysis?:language=en-US&:display_count=n&:origin=viz_share_link).
+- Final Presentation : [Presentation deck](https://docs.google.com/presentation/d/13GpnlnnnRCzY-2b2ARRzl8KAefaf1cVX/edit?usp=sharing&ouid=103214317682191239328&rtpof=true&sd=true).
 
 ### Model Selection Criteria
 
