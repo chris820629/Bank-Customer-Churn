@@ -87,7 +87,7 @@ Our team discussed our overall project objectives and resources (datasets, techn
 - Object Relational Mapper (ORM): [SQLAlchemy](https://www.sqlalchemy.org/).
 - Image file: png files.
 - Software: [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide), [Scikit-learn User Guide - Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html), [Python imbalanced-learn](https://pypi.org/project/imbalanced-learn/).
-- Tableau dashboard: [Tableau Dashboard](https://public.tableau.com/views/BankCustomerChurnAnalysis_16754641709880/BankCustomerChurnAnalysis?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link), [Model Performance Comparison](https://public.tableau.com/views/ML_Dashboard/ModelPerformanceComparison?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link/reporting/4cc5a6b1-e7a5-43c8-a0ab-25ae1ee65bbc/page/adKED).
+- Tableau dashboard: [Tableau Dashboard](https://public.tableau.com/views/BankCustomerChurnAnalysis_Story/BankCustomerChurnAnalysis?:language=en-US&:display_count=n&:origin=viz_share_link), [Model Performance Comparison](https://public.tableau.com/views/ML_Dashboard/ModelPerformanceComparison?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link/reporting/4cc5a6b1-e7a5-43c8-a0ab-25ae1ee65bbc/page/adKED).
 
 ### Model Selection Criteria
 
