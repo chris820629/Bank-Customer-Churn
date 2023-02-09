@@ -14,8 +14,10 @@ This is a team collaboration project relevant to Machine Learning, Neural Networ
 - [Segment 2: Build and Assemble](#segment-2-build-and-assemble)
   - [Analysis Results](#analysis-results)
 - [Segment 3: Put It All Together](#segment-3-put-it-all-together)
-  - [Summary](#summary)
-- [References](#references)
+  - [Summary of Model Selection](#summary-of-model-selection)
+  - [Result of Optimization](#result-of-optimization)
+  - [Future Recommendation](#future-recommendation)
+- [Technologies and Software](#technologies-and-Software)
 
 ## Overview of Project
 
@@ -23,7 +25,7 @@ This project is divided into three Segments: Segment 1, Segment 2, and Segment 3
 
 - ✅ Segment 1: Sketch It Out.
 - ✅ Segment 2: Build and Assemble.
-- 🟩 Segment 3: Put It All Together.
+- ✅ Segment 3: Put It All Together.
 
 ### Team Member
 
@@ -49,17 +51,18 @@ This project was the final team project to cultivate collaboration, teamwork, an
 - ✅ Topic selection has been finalized: prediction of bank customer churn rate.
 
 - ✅ Assessment of dataset and database management system (DBMS) is completed.
-  - Our dataset consisted of 10000 rows and 14 columns. A few numeric columns contained some outliers as illustrated in Fig. 1(a)&ndash;(c).
-  - A PostgreSQL database that stores two tables, called **main_df** and **clean_df**, was created and can be connected without problems from Python code of each Team Member. We documented some SQL queries for retrieving some data from the database ([BankCustomerChurn_ModelSelection.ipynb](./BankCustomerChurn_ModelSelection.ipynb)).
+  - Our dataset consisted of 10000 rows and 14 columns (1 target and 13 features). A few numeric columns contained some outliers as illustrated in Fig. 1(a)&ndash;(c).
+  - A PostgreSQL database that stores three tables, called **main_df**, **clean_df**, and **clean_lt2sigma_df**, was created and can be connected without problems from/to Python code via an Object Relational Mapper (ORM) technique. We documented some SQL queries for retrieving some data from the database ([BankCustomerChurn_ModelSelection.ipynb](./BankCustomerChurn_ModelSelection.ipynb)).
 
   <hr>
   <table><tr><td><img src='Data/CreditScore_boxplot.png' title='(a) Column CreditScore'></td><td><img src='Data/Age_boxplot.png' title='(b) Column Age'></td><td><img src='Data/NumOfProducts_boxplot.png' title='(c) Column NumOfProducts'></td></tr></table>
 
   **Fig. 1 Boxplots of several numerical columns containing some outliers: (a) Column CreditScore, (b) Column Age, and (c) Column NumOfProducts.**
   <hr>
+  <table><tr><td><img src='Data/BankCustomerChurn_fabricated_db.png' title='(a) Exited=0'></td><td><img src='Data/BankCustomerChurn_fabricated_db_Exited.png' title='(b) Exited=1'></td></tr></table>
 
-  ![Fig. 2](./Data/BankCustomerChurn_fabricated_db.png)  
-  **Fig. 2 Bank Customer Churn fabricated DBMS (PostgreSQL).**
+  **Fig. 2 Bank Customer Churn fabricated DBMS (PostgreSQL) with three tables properly stored. SQL query examples showing a relationship between credit scores and (a) Exited=0 (customers who stayed with the banks), (b) Exited=1 (customers who left the banks).**
+  <hr>
 
 - ✅ Preprocessing dataset and EDA is completed. The cleaned datasets, [Churn_Modelling_main.csv](./Resources/Churn_Modelling_main.csv) and [Churn_Modelling_cs_lt850.csv](./Resources/Churn_Modelling_cs_lt850.csv), are stored in the GitHub repo and PostgreSQL database.
 
@@ -67,7 +70,7 @@ This project was the final team project to cultivate collaboration, teamwork, an
   - Evaluation Machine Learning or Neural Network models that could effectively predict bank customer churn rate.
   - Optimization of our final models is completed.
 
-- 🟩 Final Presentation.
+- ✅ Final Presentation.
   - Final presentation and story/dashboard are available online.
 
 ## Segment 1: Sketch It Out
@@ -77,10 +80,11 @@ Our team discussed our overall project objectives and resources (datasets, techn
 ### Resources
 
 - GitHub repository: [Bank-Customer-Churn](https://github.com/chris820629/Bank-Customer-Churn) for sharing our analysis details, datasets, and results.
-- Source code: [BankCustomerChurn_ModelSelection.ipynb](./BankCustomerChurn_ModelSelection.ipynb), [BankCustomerChurn_EDA.ipynb](./BankCustomerChurn_EDA.ipynb).
+- Source code: [BankCustomerChurn_EDA.ipynb](./BankCustomerChurn_EDA.ipynb), [BankCustomerChurn_ModelSelection.ipynb](./BankCustomerChurn_ModelSelection.ipynb), [RandomForestOptimization.ipynb](./RandomForestOptimization.ipynb).
 - Source data: [Churn_Modelling_2.csv](./Resources/Churn_Modelling_2.csv) (source: [Churn of Bank Customers](https://www.kaggle.com/datasets/mathchi/churn-for-bank-customers?resource=download)).
 - Database data: [Churn_Modelling_main.csv](./Resources/Churn_Modelling_main.csv), [Churn_Modelling_cs_lt850.csv](./Resources/Churn_Modelling_cs_lt850.csv), [Churn_Modelling_cs_lt2sigma.csv](./Resources/Churn_Modelling_cs_lt2sigma.csv).
 - Fabricated DBMS: PostgreSQL ([Bank Customer Churn fabricated DBMS](./Data/BankCustomerChurn_fabricated_db.png)).
+- Object Relational Mapper (ORM): [SQLAlchemy](https://www.sqlalchemy.org/).
 - Image file: png files.
 - Software: [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide), [Scikit-learn User Guide - Supervised Learning](https://scikit-learn.org/stable/supervised_learning.html), [Python imbalanced-learn](https://pypi.org/project/imbalanced-learn/).
 - Tableau dashboard: [Tableau Dashboard](https://public.tableau.com/views/BankCustomerChurnAnalysis_Story/BankCustomerChurnAnalysis?:language=en-US&:display_count=n&:origin=viz_share_link).
@@ -151,11 +155,11 @@ We put the final touches on our models, database, and dashboard. Then create and
 - Will transform the summary statistics table into a fabricated database that can also be used for Tableau dashboard/story.
 - Final touches.
 
-### Summary
+### Summary of Model Selection
 
 **Table 1&ndash;2** summarize the main reasons why we preferred the ensemble learning models over the others for our study.
 
-**Table 2. Assessments of learning model selection (RFC: RandomForestClassifier, BRFC: BalancedRandomForestClassifier, EEC: EasyEnsembleClassifier, ABC: AdaBoostClassifier, NN/DNN: Neural Network/Deep Neural Network, LogisticR: LogisticRegression).**  
+**Table 2. Assessments of learning model selection (_Ensemble Learning_ RFC: RandomForestClassifier, BRFC: BalancedRandomForestClassifier, EEC: EasyEnsembleClassifier, ABC: AdaBoostClassifier, _Artificial Neural Network_ NN/DNN: Neural Network/Deep Neural Network, _Simple Regression_ LogisticR: LogisticRegression).**  
 | Learning algorithm            | RFC  | BRFC | EEC  | ABC  | NN/DNN   | LogisticR |
 | :--                           | :--: | :--: | :--: | :--: | :--:     | :--:      |
 | Bagging/Bootstrap Aggregating | Yes  | Yes  | No   | No   | Yes      |  No       |
@@ -164,7 +168,7 @@ We put the final touches on our models, database, and dashboard. Then create and
 | Applicable to large datasets  | Yes  | Yes  | Yes  | Yes  | Yes      |  No       |
 | Applicable to non-linear data | Yes  | Yes  | Yes  | Yes  | Yes      |  No       |
 | Applicable to many features   | Yes  | Yes  | Yes  | Yes  | Yes      |  No       |
-| Require scaling of features   | No   | No   | No   | No   | No       |  Yes      |
+| Require scaling of features   | No   | No   | No   | No   | Yes/No   |  Yes      |
 | Robust to under/overfitting   | Yes  | Yes  | No   | No   | No       |  No       |
 | Model interpretation          | Yes  | Yes  | Yes  | Yes  | Black box |  Yes      |
 | Suitable for this project     | 🟢  | 🟢  | 🟢  | 🟡  | 🟡      |  ⛔       |
@@ -180,7 +184,7 @@ We put the final touches on our models, database, and dashboard. Then create and
 | After	       | 0	    | 0.90	                  | 0.90	    | 0.87	  | 0.88     |
 | After	       | 1	    | 0.90	                  | 0.89	    | 0.92	  | 0.90     |
 
-### Furture Recommendation
+### Future Recommendation
 
 Model selected after optimization is sufficient and successful. Here are some challenges and limitations we identified during the process: 
 - Unconscious bias: when analyzing data and deciding to remove outliers with certain criteria without awareness of underlying causes, for instance, why many cases with credit score to their maximal level. 
@@ -190,9 +194,10 @@ Model selected after optimization is sufficient and successful. Here are some ch
 With all, a few recommendations that might improve our prediction are listed below: 
 - Explore other data source and establish more concrete parameters to regulate training and testing data moving forward. 
 - Consider to transform dataset with less than 2 sigma range in certain features. 
-- Neural network deep learning with optimization could be further performed with the benefit of inclusive multiple unknown neurons and dense layers. 
+- Neural network deep learning with optimization could be further performed with the benefit of inclusive multiple unknown neurons and dense layers.
+- Look into optimizing the models by applying advanced feature engineering techniques.
 
-## References
+## Technologies and Software
 
 [Pandas User Guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html#user-guide)  
 [TensorFlow Documentation](https://www.tensorflow.org/guide/)  
